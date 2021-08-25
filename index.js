@@ -4,7 +4,7 @@ const app = express();
 
 app.get('/', (req, res) => {
     res.send({
-        bye: 'fucking retard' 
+        bye: 'buddy' 
     });
 });
 
