@@ -12,4 +12,13 @@ module.exports = (app) => {
         '/auth/google/callback',
         passport.authenticate('google') // we have the user code, GoogleStrategy handles it differently now
     )
-}
+
+    app.get('/api/logout', (req, res) => {
+        req.logout(); // takes the cookie and kills it
+        res.send(req.user); // feedback
+    });
+
+    app.get('/api/current_user', (req,res) => {
+        res.send(req.user);
+    });
+};
