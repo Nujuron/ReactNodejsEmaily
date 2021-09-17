@@ -10,8 +10,11 @@ module.exports = (app) => {
 
     app.get(
         '/auth/google/callback',
-        passport.authenticate('google') // we have the user code, GoogleStrategy handles it differently now
-    )
+        passport.authenticate('google'), // middleware
+        (req, res) => { // after the auth is successful, do this
+            res.redirect('/surveys');
+        } 
+    );
 
     app.get('/api/logout', (req, res) => {
         req.logout(); // takes the cookie and kills it
