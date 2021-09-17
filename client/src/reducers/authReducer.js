@@ -3,7 +3,7 @@ import { FECTH_USER } from "../actions/types";
 export default function authReducer(state = null, action) {
     switch (action.type) {
         case FECTH_USER:
-            return action.paidload || false; // "" === false, so if it's empty it returns false
+            return action.payload || false; // "" === false, so if it's empty it returns false
         default:
             return state;
     }
