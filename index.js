@@ -11,6 +11,7 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+app.use(express.json());
 app.use(
     cookieSession({
         maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days in miliseconds
@@ -21,7 +22,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/authRoutes')(app); // calls the module with app object
-
+require('./routes/authRoutes')(app); // calls authRoutes with app object
+require('./routes/billingRoutes')(app);
 const PORT = process.env.PORT || 5000; // Dynamic Port Binding, production env.PORT, dev 5000
 app.listen(PORT);
