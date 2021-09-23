@@ -23,8 +23,11 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// routes
 require('./routes/authRoutes')(app); // calls authRoutes with app object
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
+
 
 if (process.env.NODE_ENV === 'production') { 
     // Express will serve up prodcution assets like our main.js file 
