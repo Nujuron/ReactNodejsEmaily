@@ -1,6 +1,7 @@
 import React from "react";
 import SurveyForm from "./SurveyForm";
 import SurveyFormReview from "./SurveyFormReview";
+import { reduxForm } from "redux-form";
 
 const useToggle = (initialState) => {
     const [isToggled, setIsToggled] = React.useState(initialState);
@@ -35,4 +36,6 @@ const NewSurvey = () => {
 
 }
 
-export default NewSurvey;
+export default reduxForm({
+    form: 'surveyForm'
+})(NewSurvey);
