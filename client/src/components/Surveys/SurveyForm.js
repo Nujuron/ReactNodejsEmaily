@@ -41,8 +41,6 @@ function validate(values) {
             errors[name] = 'You must fill in this field';
         }
     })
-    
-    
 
     return errors;
 }
