@@ -1,6 +1,6 @@
 import React from "react";
-import SurveyForm from "./surveys/SurveyForm";
-import SurveyFormReview from "./surveys/SurveyFormReview";
+import SurveyForm from "./SurveyForm";
+import SurveyFormReview from "./SurveyFormReview";
 import { reduxForm } from "redux-form";
 
 const useToggle = (initialState) => {
