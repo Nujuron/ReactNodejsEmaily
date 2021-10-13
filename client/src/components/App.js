@@ -7,7 +7,7 @@ import Header from './Header';
 import Landing from "./Landing";
 import Thanks from "./Thanks";
 import Dashboard from "./Dashboard";
-import NewSurvey from "./surveys/SurveyNew";
+import NewSurvey from "./surveys/NewSurvey";
 
 
 class App extends Component {
