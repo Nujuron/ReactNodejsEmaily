@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form';
 import SurveyField from "./SurveyField";
-import validateEmails from '../utils/validateEmails';
+import validateEmails from '../../utils/validateEmails';
 import formFields from './formFields';
 
 class SurveyForm extends Component {

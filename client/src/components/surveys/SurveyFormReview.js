@@ -4,7 +4,7 @@ import React from 'react';
 import {withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import formFields from './formFields';
-import * as actions from '../actions/';
+import * as actions from '../../actions/';
 
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => { // history object from withRouter
     const reviewFields = _.map(formFields, ({name, label}) => {
