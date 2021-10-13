@@ -6,7 +6,7 @@ class Mailer {
     sgMail.setApiKey(keys.sendGridKey);
     this.msg = {
       to: recipients.map(({ email }) => email),
-      from: "archimon99@gmail.com",
+      from: "Emaily App",
       subject: subject,
       html: content,
       trackingSettings: { enable_text: true, enabled: true }
